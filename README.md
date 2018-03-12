@@ -36,7 +36,7 @@ Parameters: Nothing
 
 Returns: Nothing
 ```
-uint8_t plc_digitalWrite(uint8_t digital_output, bool level)
+uint8_t plc_digitalWrite(uint8_t digital_output, uint8_t level)
 ```
 
 Description:
@@ -46,12 +46,12 @@ Parameters:
 
 digital_output - Digital output number [1 .. 6]
 
-level - Desired logical level in output [bool]
+level - Desired logical level in output [1 .. 0]
 
 Returns: 0 if digital_output is inside the range 1 to  6, -1 otherwise.
 
 ```
-bool plc_digitalRead(uint8_t digital_input)
+uint8_t plc_digitalRead(uint8_t digital_input)
 ```
 
 Description:
@@ -61,10 +61,10 @@ Parameters:
 
 digital_input - Digital input number [1 .. 6]
 
-Returns: Logic level in input [bool] or -1 if the argument given is not in the range 1 to 6.
+Returns: Logic level in input [1 .. 0] or -1 if the argument given is not in the range 1 to 6.
 
 ```
-bool plc_buttonRead(uint8_t button)
+uint8_t plc_buttonRead(uint8_t button)
 ```
 
 Description:
@@ -74,7 +74,7 @@ Parameters:
 
 button - Button number [1 .. 3]
 
-Returns: Logic level in button [bool] or -1 if the argument given is not in the range 1 to 3.
+Returns: Logic level in button [1 .. 0] or -1 if the argument given is not in the range 1 to 3.
 
 ```
 int plc_analogRead(uint8_t analog_input)
