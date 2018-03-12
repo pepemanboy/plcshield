@@ -107,7 +107,9 @@ void loop(){
 ## Using LCD
 The library used for LCD control is (https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library). For advanced instructions in the LCD (register modification, control commands, etc) refer to their documentation.
 
-Basic functions outlined here:
+Inside our library, there is an instance of LCD called plc_ldc, which is initialized during plcSetup().
+
+All you need to do is call plc_lcd.exampleFunction(), where exampleFunction is any of the functions outlined here:
 
 ## LCD Functions
 
