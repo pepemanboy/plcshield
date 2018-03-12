@@ -1,0 +1,21 @@
+###########################################
+# Syntax Coloring Map For Plcshield
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+plcshield	KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+plc_setup	KEYWORD2
+plc_digitalWrite	KEYWORD2
+plc_digitalRead	KEYWORD2
+plc_buttonRead	KEYWORD2
+plc_analogRead	KEYWORD2
+
+###########################################
+# Constants (LITERAL1)
+###########################################
