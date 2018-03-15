@@ -15,7 +15,7 @@
 LiquidCrystal_I2C plc_lcd(0x3F,16,2);
 
 /* MUX propagation delay (us) */
-#define plc_MUX_DELAY 1
+#define plc_MUX_DELAY 100
 
 /* Error codes */
 typedef enum
@@ -210,9 +210,27 @@ void plc_setup()
 	pinMode(plc_DO5, OUTPUT);
 	pinMode(plc_DO6, OUTPUT);
 	pinMode(plc_MUX_ENABLE, OUTPUT);
+	pinMode(plc_MUX_SELECT_0,OUTPUT);
+	pinMode(plc_MUX_SELECT_1,OUTPUT);
+	pinMode(plc_MUX_SELECT_2,OUTPUT);
+	pinMode(plc_MUX_SELECT_3,OUTPUT);
 
 	// Enable MUX operation
 	digitalWrite(plc_MUX_ENABLE, LOW);
+
+	// Initialize select in 0
+	digitalWrite(plc_MUX_SELECT_0,LOW);
+	digitalWrite(plc_MUX_SELECT_1,LOW);
+	digitalWrite(plc_MUX_SELECT_2,LOW);
+	digitalWrite(plc_MUX_SELECT_3,LOW);
+
+	// Initialize outputs in 0
+	digitalWrite(plc_DO1,LOW);
+	digitalWrite(plc_DO2,LOW);
+	digitalWrite(plc_DO3,LOW);
+	digitalWrite(plc_DO4,LOW);
+	digitalWrite(plc_DO5,LOW);
+	digitalWrite(plc_DO6,LOW);
 
 	// Configure LCD
 	_setupLcd();
