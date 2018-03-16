@@ -233,7 +233,7 @@ void plc_setup()
 	digitalWrite(plc_DO6,LOW);
 
 	// Configure LCD
-	_setupLcd();
+	// _setupLcd();
 }
 
 /** Digital write
