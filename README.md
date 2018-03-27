@@ -1,5 +1,7 @@
 # Plcshield
 
+Find this online on http://automation.cirotec.mx/plcshield
+
 # Hardware
 
 The shield contains 6 analog inputs (0-5V), 6 digital inputs (12/24V) with isolated grounds (1, 2 and 3 share an isolated ground, and 4, 5 and 6 share another isolated ground), and 6 relay outputs.
