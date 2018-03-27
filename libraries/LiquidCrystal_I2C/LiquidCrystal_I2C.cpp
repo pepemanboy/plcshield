@@ -21,7 +21,15 @@ inline void LiquidCrystal_I2C::write(uint8_t value) {
 }
 
 #endif
-#include "Wire.h"
+// #include "Wire.h"
+#define SCL_PIN 7 // Arduino pin 7
+#define SCL_PORT PORTD
+
+#define SDA_PIN 1 // Arduino pin 9
+#define SDA_PORT PORTB
+
+#include <SoftWire.h>
+SoftWire Wire = SoftWire();
 
 
 
@@ -252,7 +260,7 @@ void LiquidCrystal_I2C::write4bits(uint8_t value) {
 void LiquidCrystal_I2C::expanderWrite(uint8_t _data){                                        
 	Wire.beginTransmission(_Addr);
 	printIIC((int)(_data) | _backlightval);
-	Wire.endTransmission();   
+	Wire.endTransmission();
 }
 
 void LiquidCrystal_I2C::pulseEnable(uint8_t _data){

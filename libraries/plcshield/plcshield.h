@@ -8,7 +8,7 @@
 
 /* External libraries */
 #include "Arduino.h"
-#include <Wire.h>
+// #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
 /* LCD Instance*/
@@ -233,7 +233,7 @@ void plc_setup()
 	digitalWrite(plc_DO6,LOW);
 
 	// Configure LCD
-	// _setupLcd();
+	_setupLcd();
 }
 
 /** Digital write
