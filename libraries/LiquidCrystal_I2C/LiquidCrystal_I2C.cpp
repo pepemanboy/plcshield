@@ -22,6 +22,16 @@ inline void LiquidCrystal_I2C::write(uint8_t value) {
 
 #endif
 // #include "Wire.h"
+
+#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+
+// Simple sketch to read out one register of an I2C device
+#include <SlowSoftWire.h>
+
+// create new instance with A4 as SDA, A5 as SCL and enable internal pullups
+SlowSoftWire Wire = SlowSoftWire(9, 7, true);
+
+#else
 #define SCL_PIN 7 // Arduino pin 7
 #define SCL_PORT PORTD
 
@@ -30,6 +40,7 @@ inline void LiquidCrystal_I2C::write(uint8_t value) {
 
 #include <SoftWire.h>
 SoftWire Wire = SoftWire();
+#endif
 
 
 
