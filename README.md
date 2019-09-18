@@ -4,7 +4,7 @@ This repo contains the electronics and libraries for an Arduino PLC shield.
 
 This is a photo of the shield:
 
-
+![Photo of plcshield](https://github.com/pepemanboy/plcshield/blob/master/images/plcshield%20photo.jpg)
 
 ## Hardware
 
