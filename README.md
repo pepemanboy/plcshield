@@ -1,8 +1,12 @@
 # Plcshield
 
-Find this online on http://automation.cirotec.mx/plcshield
+This repo contains the electronics and libraries for an Arduino PLC shield. 
 
-# Hardware
+This is a photo of the shield:
+
+
+
+## Hardware
 
 The shield contains 6 analog inputs (0-5V), 6 digital inputs (12/24V) with isolated grounds (1, 2 and 3 share an isolated ground, and 4, 5 and 6 share another isolated ground), and 6 relay outputs.
 
@@ -16,7 +20,7 @@ The board needs an Arduino Ethernet to run.
 
 The schematic can be found under the PCB folder
 
-# Software
+## Software
 
 Plcshield.h is a library we developed for this project.
 
