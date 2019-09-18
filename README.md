@@ -18,11 +18,11 @@ There is a reset button, and also a connector to program the Arduino.
 
 The board needs an Arduino Ethernet to run.
 
-The schematic can be found under the PCB folder
+The schematic and pcb files can be found under the electronics folder.
 
 ## Software
 
-Plcshield.h is a library we developed for this project.
+Plcshield.h is a library we developed for this project. (located in libraries/plcshield)
 
 ## Installation
 
